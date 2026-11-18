@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    description: "Dados brutos extraídos das APIs públicas via Python."
+    tables:
+      - name: pncp_contratacoes
+        description: "Contratações e editais publicados no PNCP."

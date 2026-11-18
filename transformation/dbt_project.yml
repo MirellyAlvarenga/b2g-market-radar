@@ -1,0 +1,22 @@
+name: 'b2g_market_radar'
+version: '1.0.0'
+config-version: 2
+
+profile: 'b2g_market_radar'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  b2g_market_radar:
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table

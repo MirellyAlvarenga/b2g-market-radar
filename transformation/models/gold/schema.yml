@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: dim_orgao
+    description: "Dimensão de órgãos públicos compradores."
+    columns:
+      - name: orgao_cnpj
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_localidade
+    description: "Dimensão geográfica de municípios, estados e regiões."
+    columns:
+      - name: codigo_ibge
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_modalidade
+    description: "Dimensão das modalidades de licitação."
+    columns:
+      - name: codigo_modalidade
+        tests:
+          - unique
+          - not_null
+
+  - name: fato_contratacoes
+    description: "Tabela fato central com métricas financeiras e de pricing das contratações."
+    columns:
+      - name: numero_controle_pncp
+        tests:
+          - unique
+          - not_null
+      - name: orgao_cnpj
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_orgao')
+              field: orgao_cnpj
+      - name: codigo_ibge
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_localidade')
+              field: codigo_ibge
+      - name: codigo_modalidade
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_modalidade')
+              field: codigo_modalidade
