@@ -8,6 +8,8 @@ import httpx
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
+from ingestion.audit import finish_pipeline_run, start_pipeline_run
+
 from ingestion.db import get_engine
 
 logging.basicConfig(
@@ -60,7 +62,7 @@ def fetch_page_with_retry(
                 return None
 
             if response.status_code == 429 or response.status_code >= 500:
-                wait_seconds = 2 ** attempt
+                wait_seconds = 2**attempt
                 logger.warning(
                     "Status %s na página %s. Tentativa %s/%s. Aguardando %ss...",
                     response.status_code,
@@ -76,7 +78,7 @@ def fetch_page_with_retry(
             return response.json()
 
         except httpx.RequestError as exc:
-            wait_seconds = 2 ** attempt
+            wait_seconds = 2**attempt
             logger.warning(
                 "Erro de rede (%s). Tentativa %s/%s. Aguardando %ss...",
                 exc,
@@ -86,10 +88,14 @@ def fetch_page_with_retry(
             )
             time.sleep(wait_seconds)
 
-    raise RuntimeError(f"Falha ao consultar PNCP após {max_retries} tentativas: {params}")
+    raise RuntimeError(
+        f"Falha ao consultar PNCP após {max_retries} tentativas: {params}"
+    )
 
 
-def save_batch(engine: Engine, items: list[dict[str, Any]], codigo_modalidade: int) -> int:
+def save_batch(
+    engine: Engine, items: list[dict[str, Any]], codigo_modalidade: int
+) -> int:
     """Insere um lote de registros brutos na tabela bronze.pncp_contratacoes."""
     if not items:
         return 0
@@ -135,59 +141,109 @@ def ingest_contratacoes(
     modalidades: dict[int, str] | None = None,
     tamanho_pagina: int = 50,
 ) -> None:
-    """Orquestra a extração paginada por modalidade e salva na camada bronze."""
+    """Orquestra a extração paginada por modalidade com registro de auditoria."""
     engine = get_engine()
     ensure_bronze_table(engine)
 
     target_modalidades = modalidades or MODALIDADES_ALVO
-    total_geral = 0
+    run_id, started_at = start_pipeline_run(
+        engine,
+        pipeline_name="pncp_contratacoes_bronze",
+        metadata={
+            "data_inicial": data_inicial,
+            "data_final": data_final,
+            "modalidades": list(target_modalidades.keys()),
+        },
+    )
 
-    with httpx.Client(timeout=30.0) as client:
-        for cod_mod, nome_mod in target_modalidades.items():
-            pagina = 1
-            total_modalidade = 0
-            logger.info("Iniciando extração: [%s - %s] (%s a %s)", cod_mod, nome_mod, data_inicial, data_final)
+    total_extraido = 0
+    total_inserido = 0
 
-            while True:
-                params = {
-                    "dataInicial": data_inicial,
-                    "dataFinal": data_final,
-                    "codigoModalidadeContratacao": cod_mod,
-                    "pagina": pagina,
-                    "tamanhoPagina": tamanho_pagina,
-                }
-
-                payload = fetch_page_with_retry(client, params)
-                if not payload:
-                    logger.info("Sem mais registros (HTTP 204) na página %s.", pagina)
-                    break
-
-                items = payload.get("data", [])
-                if not items:
-                    break
-
-                inserted = save_batch(engine, items, cod_mod)
-                total_modalidade += inserted
-                paginas_restantes = payload.get("paginasRestantes", 0)
-
+    try:
+        with httpx.Client(timeout=30.0) as client:
+            for cod_mod, nome_mod in target_modalidades.items():
+                pagina = 1
+                total_modalidade = 0
                 logger.info(
-                    "Modalidade %s | Página %s salva (%s registros) | Páginas restantes: %s",
+                    "Iniciando extração: [%s - %s] (%s a %s)",
                     cod_mod,
-                    pagina,
-                    inserted,
-                    paginas_restantes,
+                    nome_mod,
+                    data_inicial,
+                    data_final,
                 )
 
-                if paginas_restantes <= 0:
-                    break
+                while True:
+                    params = {
+                        "dataInicial": data_inicial,
+                        "dataFinal": data_final,
+                        "codigoModalidadeContratacao": cod_mod,
+                        "pagina": pagina,
+                        "tamanhoPagina": tamanho_pagina,
+                    }
 
-                pagina += 1
-                time.sleep(0.3)  # Pausa preventiva para evitar bloqueio por rate limit
+                    payload = fetch_page_with_retry(client, params)
+                    if not payload:
+                        logger.info(
+                            "Sem mais registros (HTTP 204) na página %s.", pagina
+                        )
+                        break
 
-            logger.info("Concluído [%s]: %s registros carregados.", nome_mod, total_modalidade)
-            total_geral += total_modalidade
+                    items = payload.get("data", [])
+                    if not items:
+                        break
 
-    logger.info("Ingestão finalizada com sucesso. Total inserido na Bronze: %s registros.", total_geral)
+                    total_extraido += len(items)
+                    inserted = save_batch(engine, items, cod_mod)
+                    total_modalidade += inserted
+                    paginas_restantes = payload.get("paginasRestantes", 0)
+
+                    logger.info(
+                        "Modalidade %s | Página %s salva (%s registros) | Páginas restantes: %s",
+                        cod_mod,
+                        pagina,
+                        inserted,
+                        paginas_restantes,
+                    )
+
+                    if paginas_restantes <= 0:
+                        break
+
+                    pagina += 1
+                    time.sleep(0.3)
+
+                logger.info(
+                    "Concluído [%s]: %s registros carregados.",
+                    nome_mod,
+                    total_modalidade,
+                )
+                total_inserido += total_modalidade
+
+        finish_pipeline_run(
+            engine,
+            run_id=run_id,
+            started_at=started_at,
+            status="SUCCESS",
+            records_extracted=total_extraido,
+            records_inserted=total_inserido,
+        )
+        logger.info(
+            "Ingestão finalizada (run_id=%s). Total inserido: %s.",
+            run_id,
+            total_inserido,
+        )
+
+    except Exception as exc:
+        finish_pipeline_run(
+            engine,
+            run_id=run_id,
+            started_at=started_at,
+            status="FAILED",
+            records_extracted=total_extraido,
+            records_inserted=total_inserido,
+            error_message=str(exc),
+        )
+        logger.exception("Falha crítica na ingestão (run_id=%s).", run_id)
+        raise
 
 
 if __name__ == "__main__":

@@ -175,6 +175,15 @@ table fato_contratacoes
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column is_outlier_valor
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: eec70271-7e03-4d2b-9a28-deb8c82514b0
+		summarizeBy: none
+		sourceColumn: is_outlier_valor
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fato_contratacoes = m
 		mode: import
 		source =
@@ -183,8 +192,6 @@ table fato_contratacoes
 				    gold_fato_contratacoes = Fonte{[Schema="gold",Item="fato_contratacoes"]}[Data]
 				in
 				    gold_fato_contratacoes
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

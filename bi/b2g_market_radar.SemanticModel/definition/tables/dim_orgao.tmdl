@@ -42,7 +42,5 @@ table dim_orgao
 				in
 				    gold_dim_orgao
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

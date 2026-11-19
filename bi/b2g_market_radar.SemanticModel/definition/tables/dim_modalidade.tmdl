@@ -27,7 +27,5 @@ table dim_modalidade
 				in
 				    gold_dim_modalidade
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

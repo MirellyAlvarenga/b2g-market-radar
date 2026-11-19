@@ -42,7 +42,5 @@ table dim_localidade
 				in
 				    gold_dim_localidade
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 
