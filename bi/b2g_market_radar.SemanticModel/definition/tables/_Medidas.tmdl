@@ -54,6 +54,24 @@ table _Medidas
 		formatString: 0
 		lineageTag: 32c1faaf-264d-4bdf-9846-ccd78d59feef
 
+	measure 'Volume Contratado' = SUM(fato_contratos[valor_global])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: c2cf2e35-941f-4fb8-aac5-48c4f846f7f8
+
+	measure 'Contratos Assinados' = COUNTROWS(fato_contratos)
+		formatString: 0
+		lineageTag: 58df4c47-71db-4c32-be91-ce6b5068833f
+
+	measure 'Fornecedores Unicos' = DISTINCTCOUNT(fato_contratos[fornecedor_documento])
+		formatString: 0
+		lineageTag: 360e0652-f777-4537-b0a9-6531e703844c
+
+	measure 'Ticket Medio Contrato' = DIVIDE([Volume Contratado], [Contratos Assinados], 0)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 8f872afc-1ef7-4ee8-bda3-5cbb1d081add
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
 	partition _Medidas = m
 		mode: import
 		source =

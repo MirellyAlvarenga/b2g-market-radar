@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 671.86057937248017,
-            "y": 544.82273332134491
+            "y": 603.64672885507844
           },
           "nodeIndex": "dim_localidade",
           "nodeLineageTag": "def72a59-9d10-4ac9-997a-2060c418f7c0",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 50,
-            "y": 132.59133921200225
+            "y": 191.41533474573578
           },
           "nodeIndex": "dim_modalidade",
           "size": {
@@ -36,7 +36,7 @@
         {
           "location": {
             "x": 453.44461734619119,
-            "y": 67.647991067467
+            "y": 126.47198660120053
           },
           "nodeIndex": "dim_orgao",
           "nodeLineageTag": "c9d6ea1d-78ad-44bd-9696-6c945bd204e1",
@@ -49,7 +49,7 @@
         {
           "location": {
             "x": 267.93576350107065,
-            "y": 445.44635503872314
+            "y": 504.27035057245666
           },
           "nodeIndex": "fato_contratacoes",
           "nodeLineageTag": "155fc2ee-61b7-4b01-ad05-dae6d024c7c6",
@@ -62,7 +62,7 @@
         {
           "location": {
             "x": 781.83926241545737,
-            "y": 118.40538871286344
+            "y": 177.22938424659696
           },
           "nodeIndex": "dCalendario",
           "nodeLineageTag": "0886a8f4-efe7-48d4-9e5e-b608015490ff",
@@ -75,12 +75,36 @@
         {
           "location": {
             "x": 1015.8392624154574,
-            "y": 309.4485123414504
+            "y": 368.27250787518392
           },
           "nodeIndex": "_Medidas",
           "nodeLineageTag": "64d56511-8a37-49e8-9718-7e5dbb7649ec",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1583.8392624154574,
+            "y": 197.72317751936157
+          },
+          "nodeIndex": "dim_fornecedor",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1299.8392624154574,
+            "y": 197.72317751936157
+          },
+          "nodeIndex": "fato_contratos",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0
@@ -92,8 +116,75 @@
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
       "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 153.61731304903958
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 376,
+            "y": 29
+          },
+          "nodeIndex": "dim_fornecedor",
+          "nodeLineageTag": "b4241ddc-3b7d-457c-9d25-83564a3dd599",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": -60,
+            "y": 85
+          },
+          "nodeIndex": "fato_contratos",
+          "nodeLineageTag": "bbed8d77-6624-4ae8-9041-28cd8b33dace",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 381,
+            "y": 367
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "0886a8f4-efe7-48d4-9e5e-b608015490ff",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": -29.016387999999978,
+            "y": 590.59410700000012
+          },
+          "nodeIndex": "dim_orgao",
+          "nodeLineageTag": "c9d6ea1d-78ad-44bd-9696-6c945bd204e1",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1",
+      "zoomValue": 70.955543900968834,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Todas as tabelas",
+  "selectedDiagram": "Layout 1",
   "defaultDiagram": "Todas as tabelas"
 }

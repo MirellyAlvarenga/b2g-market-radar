@@ -50,3 +50,25 @@ models:
           - relationships:
               to: ref('dim_modalidade')
               field: codigo_modalidade
+
+  - name: dim_fornecedor
+    description: "Dimensão de fornecedores contratados enriquecida com CNAE e porte via BrasilAPI."
+    columns:
+      - name: fornecedor_documento
+        tests:
+          - unique
+          - not_null
+
+  - name: fato_contratos
+    description: "Tabela fato de contratos assinados vinculando órgãos compradores e fornecedores."
+    columns:
+      - name: numero_controle_pncp
+        tests:
+          - unique
+          - not_null
+      - name: fornecedor_documento
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_fornecedor')
+              field: fornecedor_documento

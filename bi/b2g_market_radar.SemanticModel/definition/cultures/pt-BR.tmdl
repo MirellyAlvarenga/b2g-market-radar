@@ -2882,9 +2882,3940 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "fato_contratacoe.is_outlier_valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratacoes",
+			          "ConceptualProperty": "is_outlier_valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is outlier valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is_outlier_valor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "valor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "outlier valor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "is outlier courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is outlier bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is outlier heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is outlier fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is outlier boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is outlier gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is outlier lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "outlier courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "outlier bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "outlier heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.volume_contratado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Volume Contratado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "volume contratado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Volume Total Contratado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.contratos_assinados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Contratos Assinados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "contratos assinados": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.fornecedores_unicos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Fornecedores Unicos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fornecedores unicos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fornecedores Únicos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__medida.ticket_medio_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Medidas",
+			          "ConceptualProperty": "Ticket Medio Contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket medio contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ticket Médio por Contrato": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim fornecedor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_fornecedor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.fornecedor_documento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "fornecedor_documento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fornecedor documento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fornecedor_documento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.fornecedor_razao_social": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "fornecedor_razao_social"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fornecedor razao social": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fornecedor_razao_social": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fornecedor razao party": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "fornecedor razao get-together": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "fornecedor razao gathering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.nome_fantasia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "nome_fantasia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome fantasia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nome_fantasia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fantasia": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.fornecedor_tipo_pessoa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "fornecedor_tipo_pessoa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fornecedor tipo pessoa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fornecedor_tipo_pessoa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.porte_empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "porte_empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "porte empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "porte_empresa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.cnae_codigo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "cnae_codigo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cnae codigo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cnae_codigo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.cnae_descricao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "cnae_descricao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cnae descricao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cnae_descricao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.uf_sede": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "uf_sede"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "uf sede": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "uf_sede": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.municipio_sede": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "municipio_sede"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "municipio sede": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "municipio_sede": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.capital_social": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "capital_social"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capital social": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "capital_social": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "social": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "community": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "common": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "public": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "collective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "capital party": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "capital get-together": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "capital gathering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "party": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "get-together": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "gathering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fornecedor.is_enriquecido_brasilapi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_fornecedor",
+			          "ConceptualProperty": "is_enriquecido_brasilapi"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is enriquecido brasilapi": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "is_enriquecido_brasilapi": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fato_contratos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.numero_controle_pncp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "numero_controle_pncp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero controle pncp": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_controle_pncp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.numero_controle_compra": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "numero_controle_compra"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero controle compra": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_controle_compra": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.orgao_cnpj": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "orgao_cnpj"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "orgao cnpj": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "orgao_cnpj": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.fornecedor_documento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "fornecedor_documento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fornecedor documento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fornecedor_documento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.ano_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "ano_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ano_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.numero_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "numero_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.objeto_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "objeto_contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "objeto contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "objeto_contrato": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_publicacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "data_publicacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data publicacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_publicacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record publicacao": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fato_contrato.data_assinatura": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "data_assinatura"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data assinatura": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_assinatura": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record assinatura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fato_contrato.data_assinatura.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_assinatura",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_assinatura.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_assinatura",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data assinatura ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record assinatura ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_assinatura.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_assinatura",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data assinatura trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record assinatura trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_assinatura.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_assinatura",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data assinatura mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record assinatura mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_assinatura.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_assinatura",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data assinatura dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record assinatura dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_inicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "data_vigencia_inicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data vigencia inicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_vigencia_inicio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record vigencia inicio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fato_contrato.data_vigencia_inicio.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_inicio",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_inicio.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_inicio",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia inicio ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia inicio ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_inicio.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_inicio",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia inicio trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia inicio trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_inicio.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_inicio",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia inicio mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia inicio mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_inicio.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_inicio",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia inicio dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia inicio dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_fim": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "data_vigencia_fim"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data vigencia fim": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_vigencia_fim": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record vigencia fim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fato_contrato.data_vigencia_fim.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_fim",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_fim.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_fim",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia fim ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia fim ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_fim.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_fim",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia fim trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia fim trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_fim.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_fim",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia fim mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia fim mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.data_vigencia_fim.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "VariationSource": "data_vigencia_fim",
+			          "VariationSet": "Variação",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data vigencia fim dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record vigencia fim dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.prazo_vigencia_dias": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "prazo_vigencia_dias"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prazo vigencia dias": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "prazo_vigencia_dias": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.valor_inicial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "valor_inicial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor inicial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_inicial": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.valor_global": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "valor_global"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor global": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_global": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "courage global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "bravery global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "heroism global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "fearlessness global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "boldness global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gallantry global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lionheartedness global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pluck global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "spirit global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "nerve global": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.valor_parcela": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "valor_parcela"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor parcela": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_parcela": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_contrato.numero_parcela": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_contratos",
+			          "ConceptualProperty": "numero_parcelas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero parcela": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_parcelas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fato_contrato_data_vigencia_fim_mê_has_fato_contrato_data_vigencia_fim_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.mê"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.dia": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.dia"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê5"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_trimestre_has_fato_contrato_data_vigencia_fim_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.trimestre"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres5"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_ano_has_fato_contrato_data_vigencia_fim_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.ano": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.ano"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.ano"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos5"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_hierarquia_de_data_has_fato_contrato_data_vigencia_fim_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.dia": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_hierarquia_de_data_has_fato_contrato_data_vigencia_fim_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_hierarquia_de_data_has_fato_contrato_data_vigencia_fim_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_hierarquia_de_data_has_fato_contrato_data_vigencia_fim_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.ano": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_fim_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_fim": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_fim"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_vigencia_fims_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_mê_has_fato_contrato_data_vigencia_inicio_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.mê"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.dia": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.dia"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê4"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_trimestre_has_fato_contrato_data_vigencia_inicio_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.trimestre"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres4"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_ano_has_fato_contrato_data_vigencia_inicio_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.ano": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.ano"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.ano"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos4"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_hierarquia_de_data_has_fato_contrato_data_vigencia_inicio_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.dia": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias1"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_hierarquia_de_data_has_fato_contrato_data_vigencia_inicio_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê1"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_hierarquia_de_data_has_fato_contrato_data_vigencia_inicio_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_hierarquia_de_data_has_fato_contrato_data_vigencia_inicio_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.ano": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos1"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_vigencia_inicio_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_vigencia_inicio": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_vigencia_inicio"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_vigencia_inicios_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_mê_has_fato_contrato_data_assinatura_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.mê"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.dia": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.dia"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê3"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_trimestre_has_fato_contrato_data_assinatura_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.trimestre"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres3"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_ano_has_fato_contrato_data_assinatura_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.ano": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.ano"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.ano"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos3"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_hierarquia_de_data_has_fato_contrato_data_assinatura_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.dia": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias2"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_hierarquia_de_data_has_fato_contrato_data_assinatura_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.mê": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê2"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_hierarquia_de_data_has_fato_contrato_data_assinatura_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.trimestre": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_hierarquia_de_data_has_fato_contrato_data_assinatura_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.hierarquia_de_data"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.ano": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos2"
+			        }
+			      ]
+			    },
+			    "fato_contrato_data_assinatura_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato.data_assinatura": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura"
+			          }
+			        },
+			        "fato_contrato.data_assinatura.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato.data_assinatura"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_assinaturas_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
 			    "d_calendario_date_mê_has_d_calendario_date_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "dCalendario"
@@ -2914,7 +6845,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
+			          "ID": "mê_have_dias3"
 			        },
 			        {
 			          "Attribute": {
@@ -2927,7 +6858,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
+			          "ID": "dias_have_mê3"
 			        },
 			        {
 			          "Preposition": {
@@ -2980,7 +6911,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
+			          "ID": "trimestres_have_mê3"
 			        },
 			        {
 			          "Attribute": {
@@ -2993,7 +6924,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
+			          "ID": "mê_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -3046,7 +6977,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
+			          "ID": "anos_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -3059,7 +6990,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
+			          "ID": "trimestres_have_anos3"
 			        },
 			        {
 			          "Preposition": {
@@ -3112,7 +7043,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -3145,7 +7076,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -3178,7 +7109,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
+			          "ID": "hierarquia_de_data_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -3211,7 +7142,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
+			          "ID": "hierarquia_de_data_have_anos3"
 			        }
 			      ]
 			    },
@@ -3277,7 +7208,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias4"
 			        },
 			        {
 			          "Attribute": {
@@ -3290,7 +7221,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê4"
 			        },
 			        {
 			          "Preposition": {
@@ -3343,7 +7274,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê4"
 			        },
 			        {
 			          "Attribute": {
@@ -3356,7 +7287,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -3409,7 +7340,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -3422,7 +7353,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos4"
 			        },
 			        {
 			          "Preposition": {
@@ -3475,7 +7406,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },
@@ -3508,7 +7439,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê4"
 			        }
 			      ]
 			    },
@@ -3541,7 +7472,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -3574,7 +7505,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_anos4"
 			        }
 			      ]
 			    },
@@ -3640,7 +7571,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias5"
 			        },
 			        {
 			          "Attribute": {
@@ -3653,7 +7584,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê5"
 			        },
 			        {
 			          "Preposition": {
@@ -3706,7 +7637,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê5"
 			        },
 			        {
 			          "Attribute": {
@@ -3719,7 +7650,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres5"
 			        },
 			        {
 			          "Preposition": {
@@ -3772,7 +7703,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres5"
 			        },
 			        {
 			          "Attribute": {
@@ -3785,7 +7716,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos5"
 			        },
 			        {
 			          "Preposition": {
@@ -3838,7 +7769,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias5"
 			        }
 			      ]
 			    },
@@ -3871,7 +7802,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê5"
 			        }
 			      ]
 			    },
@@ -3904,7 +7835,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
+			          "ID": "hierarquia_de_data_have_trimestres5"
 			        }
 			      ]
 			    },
@@ -3937,7 +7868,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
+			          "ID": "hierarquia_de_data_have_anos5"
 			        }
 			      ]
 			    },
@@ -3971,6 +7902,144 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "data_abertura_propostas_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_dim_orgao": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "dim_orgao": {
+			          "Target": {
+			            "Entity": "dim_orgao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "dim_orgao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_dim_orgaos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_orgao"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_orgaos_have_fato_contratos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_d_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "d_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_d_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_fato_contratos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_dim_fornecedor": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_dim_fornecedors"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_fato_contratos"
 			        }
 			      ]
 			    },
@@ -4155,6 +8224,996 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_localidades_have_fato_contratacoes"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_numero_parcela": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.numero_parcela": {
+			          "Target": {
+			            "Entity": "fato_contrato.numero_parcela"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.numero_parcela"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_numero_parcelas"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_valor_parcela": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.valor_parcela": {
+			          "Target": {
+			            "Entity": "fato_contrato.valor_parcela"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.valor_parcela"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_valor_parcelas"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_valor_global": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.valor_global": {
+			          "Target": {
+			            "Entity": "fato_contrato.valor_global"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.valor_global"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_valor_global"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_valor_inicial": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.valor_inicial": {
+			          "Target": {
+			            "Entity": "fato_contrato.valor_inicial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.valor_inicial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_valor_inicials"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_prazo_vigencia_dias": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.prazo_vigencia_dias": {
+			          "Target": {
+			            "Entity": "fato_contrato.prazo_vigencia_dias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.prazo_vigencia_dias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_prazo_vigencia_dias"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_data_vigencia_fim": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_fim": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_fim"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_fim"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_data_vigencia_fims"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_data_vigencia_inicio": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.data_vigencia_inicio": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_vigencia_inicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_vigencia_inicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_data_vigencia_inicios"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_data_assinatura": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.data_assinatura": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_assinatura"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_assinatura"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_data_assinaturas"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_data_publicacao": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.data_publicacao": {
+			          "Target": {
+			            "Entity": "fato_contrato.data_publicacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.data_publicacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_data_publicacaos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_objeto_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.objeto_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato.objeto_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.objeto_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_objeto_contratos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_numero_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.numero_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato.numero_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.numero_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_numero_contratos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_ano_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.ano_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato.ano_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.ano_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_ano_contratos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_numero_controle_compra": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.numero_controle_compra": {
+			          "Target": {
+			            "Entity": "fato_contrato.numero_controle_compra"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.numero_controle_compra"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_numero_controle_compras"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_numero_controle_pncp": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "fato_contrato.numero_controle_pncp": {
+			          "Target": {
+			            "Entity": "fato_contrato.numero_controle_pncp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "fato_contrato.numero_controle_pncp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_numero_controle_pncps"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_is_enriquecido_brasilapi": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.is_enriquecido_brasilapi": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.is_enriquecido_brasilapi"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.is_enriquecido_brasilapi"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_is_enriquecido_brasilapis"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_capital_social": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.capital_social": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.capital_social"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.capital_social"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_capital_socials"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_municipio_sede": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.municipio_sede": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.municipio_sede"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.municipio_sede"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_municipio_sedes"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_uf_sede": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.uf_sede": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.uf_sede"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.uf_sede"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_uf_sedes"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_cnae_descricao": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.cnae_descricao": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.cnae_descricao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.cnae_descricao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_cnae_descricaos"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_cnae_codigo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.cnae_codigo": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.cnae_codigo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.cnae_codigo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_cnae_codigos"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_porte_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.porte_empresa": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.porte_empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.porte_empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_porte_empresas"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_fornecedor_tipo_pessoa": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.fornecedor_tipo_pessoa": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.fornecedor_tipo_pessoa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.fornecedor_tipo_pessoa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_fornecedor_tipo_pessoa"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_nome_fantasia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.nome_fantasia": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.nome_fantasia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.nome_fantasia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_nome_fantasias"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_fornecedor_razao_social": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.fornecedor_razao_social": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.fornecedor_razao_social"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.fornecedor_razao_social"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_fornecedor_razao_socials"
+			        }
+			      ]
+			    },
+			    "dim_fornecedor_has_fornecedor_documento": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_fornecedor"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fornecedor": {
+			          "Target": {
+			            "Entity": "dim_fornecedor"
+			          }
+			        },
+			        "dim_fornecedor.fornecedor_documento": {
+			          "Target": {
+			            "Entity": "dim_fornecedor.fornecedor_documento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fornecedor"
+			            },
+			            "Object": {
+			              "Role": "dim_fornecedor.fornecedor_documento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fornecedors_have_fornecedor_documentos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_entity__medida_ticket_medio_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "entity__medida.ticket_medio_contrato": {
+			          "Target": {
+			            "Entity": "entity__medida.ticket_medio_contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.ticket_medio_contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_ticket_medio_contrato"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_entity__medida_fornecedores_unicos": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "entity__medida.fornecedores_unicos": {
+			          "Target": {
+			            "Entity": "entity__medida.fornecedores_unicos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.fornecedores_unicos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_fornecedores_unicos"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_entity__medida_contratos_assinados": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "entity__medida.contratos_assinados": {
+			          "Target": {
+			            "Entity": "entity__medida.contratos_assinados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.contratos_assinados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_contratos_assinados"
+			        }
+			      ]
+			    },
+			    "fato_contrato_has_entity__medida_volume_contratado": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contrato": {
+			          "Target": {
+			            "Entity": "fato_contrato"
+			          }
+			        },
+			        "entity__medida.volume_contratado": {
+			          "Target": {
+			            "Entity": "entity__medida.volume_contratado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contrato"
+			            },
+			            "Object": {
+			              "Role": "entity__medida.volume_contratado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratos_have_volume_contratado"
+			        }
+			      ]
+			    },
+			    "fato_contratacoe_has_is_outlier_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_contratacoes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_contratacoe": {
+			          "Target": {
+			            "Entity": "fato_contratacoe"
+			          }
+			        },
+			        "fato_contratacoe.is_outlier_valor": {
+			          "Target": {
+			            "Entity": "fato_contratacoe.is_outlier_valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_contratacoe"
+			            },
+			            "Object": {
+			              "Role": "fato_contratacoe.is_outlier_valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_contratacoes_have_is_outlier_valor"
 			        }
 			      ]
 			    },

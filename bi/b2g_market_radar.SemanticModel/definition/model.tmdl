@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dim_localidade","dim_modalidade","dim_orgao","fato_contratacoes","_Medidas"]
+annotation PBI_QueryOrder = ["dim_localidade","dim_modalidade","dim_orgao","fato_contratacoes","_Medidas","dim_fornecedor","fato_contratos"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -23,6 +23,11 @@ ref table LocalDateTable_231eec56-1207-4fda-a835-04a316b6bee6
 ref table dCalendario
 ref table LocalDateTable_a050853f-7f0a-4643-8f80-64f4405f055b
 ref table _Medidas
+ref table dim_fornecedor
+ref table fato_contratos
+ref table LocalDateTable_a29ff7c8-20cd-47e0-9b09-cb0fa459cfbc
+ref table LocalDateTable_a4faf586-8137-4653-803f-bf8af6a691d9
+ref table LocalDateTable_596c447e-a5fe-43fb-bb69-473db25086c2
 
 ref cultureInfo pt-BR
 

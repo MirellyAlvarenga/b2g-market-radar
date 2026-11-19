@@ -1,0 +1,178 @@
+table fato_contratos
+	lineageTag: bbed8d77-6624-4ae8-9041-28cd8b33dace
+
+	column numero_controle_pncp
+		dataType: string
+		lineageTag: 4ea7b950-a595-4e86-8605-a7de4e99b5bb
+		summarizeBy: none
+		sourceColumn: numero_controle_pncp
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_controle_compra
+		dataType: string
+		lineageTag: 1545c13e-4344-4214-91b4-117d93c949d9
+		summarizeBy: none
+		sourceColumn: numero_controle_compra
+
+		annotation SummarizationSetBy = Automatic
+
+	column orgao_cnpj
+		dataType: string
+		lineageTag: fb15123e-14f4-4b7e-b7a1-52411120eda0
+		summarizeBy: none
+		sourceColumn: orgao_cnpj
+
+		annotation SummarizationSetBy = Automatic
+
+	column fornecedor_documento
+		dataType: string
+		lineageTag: e172f019-895d-4664-9ccd-b203d0f9e975
+		summarizeBy: none
+		sourceColumn: fornecedor_documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: 07f34fca-1b03-48c0-b12e-07919dcb2608
+		summarizeBy: sum
+		sourceColumn: ano_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_contrato
+		dataType: string
+		lineageTag: cbf682dc-6a0a-412c-9392-086b4b5bbda3
+		summarizeBy: none
+		sourceColumn: numero_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column objeto_contrato
+		dataType: string
+		lineageTag: a4d82d29-a52e-4454-8bc8-0de09dae4d1a
+		summarizeBy: none
+		sourceColumn: objeto_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_publicacao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e79a74f-5b7b-4110-bd99-f45ee0ebac83
+		summarizeBy: none
+		sourceColumn: data_publicacao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_assinatura
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bb36a144-a89c-4fd3-b758-d259ab987735
+		summarizeBy: none
+		sourceColumn: data_assinatura
+
+		variation Variação
+			isDefault
+			relationship: e3122338-0592-4dc6-bed6-efe279d3da60
+			defaultHierarchy: LocalDateTable_a29ff7c8-20cd-47e0-9b09-cb0fa459cfbc.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_vigencia_inicio
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 605897bc-19d2-4941-a2a9-0dfa82487a2f
+		summarizeBy: none
+		sourceColumn: data_vigencia_inicio
+
+		variation Variação
+			isDefault
+			relationship: 94f5cd63-8298-4746-ac29-4cc71c9d5a55
+			defaultHierarchy: LocalDateTable_a4faf586-8137-4653-803f-bf8af6a691d9.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_vigencia_fim
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a611e7d5-3831-46ad-a5b1-fb3499834ee5
+		summarizeBy: none
+		sourceColumn: data_vigencia_fim
+
+		variation Variação
+			isDefault
+			relationship: f89b4a63-185f-48a2-9411-77b858eb178a
+			defaultHierarchy: LocalDateTable_596c447e-a5fe-43fb-bb69-473db25086c2.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column prazo_vigencia_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 601a69ae-26b5-4e76-b6d2-3b52d453d525
+		summarizeBy: sum
+		sourceColumn: prazo_vigencia_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_inicial
+		dataType: double
+		lineageTag: 9c0cda82-8f8a-416e-8e04-ef975491b929
+		summarizeBy: sum
+		sourceColumn: valor_inicial
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_global
+		dataType: double
+		lineageTag: 3181b93a-80e0-474d-916d-f2d514ed4141
+		summarizeBy: sum
+		sourceColumn: valor_global
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_parcela
+		dataType: double
+		lineageTag: 58fb7ae7-f6a1-4e88-afdf-a4a41e92c7df
+		summarizeBy: sum
+		sourceColumn: valor_parcela
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column numero_parcelas
+		dataType: int64
+		formatString: 0
+		lineageTag: 039314d8-e6fb-4555-a7fb-59f965eb3ca8
+		summarizeBy: sum
+		sourceColumn: numero_parcelas
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_contratos = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5433", "b2g_market_radar"),
+				    gold_fato_contratos = Fonte{[Schema="gold",Item="fato_contratos"]}[Data]
+				in
+				    gold_fato_contratos
+
+	changedProperty = Name
+

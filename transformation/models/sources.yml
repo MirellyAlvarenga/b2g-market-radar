@@ -7,3 +7,7 @@ sources:
     tables:
       - name: pncp_contratacoes
         description: "Contratações e editais publicados no PNCP."
+      - name: pncp_contratos
+        description: "Contratos formalizados e fornecedores vencedores publicados no PNCP."
+      - name: brasilapi_empresas
+        description: "Dados cadastrais, porte e CNAE de empresas consultadas na BrasilAPI."

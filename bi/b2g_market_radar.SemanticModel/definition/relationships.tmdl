@@ -29,3 +29,30 @@ relationship b73103e9-b77f-78b4-a99a-95ec2d726e34
 	fromColumn: fato_contratacoes.data_publicacao
 	toColumn: dCalendario.Date
 
+relationship e3122338-0592-4dc6-bed6-efe279d3da60
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_contratos.data_assinatura
+	toColumn: LocalDateTable_a29ff7c8-20cd-47e0-9b09-cb0fa459cfbc.Date
+
+relationship 94f5cd63-8298-4746-ac29-4cc71c9d5a55
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_contratos.data_vigencia_inicio
+	toColumn: LocalDateTable_a4faf586-8137-4653-803f-bf8af6a691d9.Date
+
+relationship f89b4a63-185f-48a2-9411-77b858eb178a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_contratos.data_vigencia_fim
+	toColumn: LocalDateTable_596c447e-a5fe-43fb-bb69-473db25086c2.Date
+
+relationship AutoDetected_88afdfdc-e427-49ca-80d7-e7750d9a6f51
+	fromColumn: fato_contratos.fornecedor_documento
+	toColumn: dim_fornecedor.fornecedor_documento
+
+relationship cd266f23-905b-1689-ed31-e1269f1fac1e
+	fromColumn: fato_contratos.data_publicacao
+	toColumn: dCalendario.Date
+
+relationship b50065da-cf08-5151-ef3a-eae0d06ea799
+	fromColumn: fato_contratos.orgao_cnpj
+	toColumn: dim_orgao.orgao_cnpj
+

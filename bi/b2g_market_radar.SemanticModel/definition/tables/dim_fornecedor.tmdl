@@ -1,0 +1,105 @@
+table dim_fornecedor
+	lineageTag: b4241ddc-3b7d-457c-9d25-83564a3dd599
+
+	column fornecedor_documento
+		dataType: string
+		lineageTag: ea00e534-62da-497b-8eca-a0d3900922a1
+		summarizeBy: none
+		sourceColumn: fornecedor_documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column fornecedor_razao_social
+		dataType: string
+		lineageTag: 053ab5c7-1896-4a53-958c-b79d52f6fa1d
+		summarizeBy: none
+		sourceColumn: fornecedor_razao_social
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_fantasia
+		dataType: string
+		lineageTag: 52a48a5d-a4b5-4cf2-8198-10d4f55c9438
+		summarizeBy: none
+		sourceColumn: nome_fantasia
+
+		annotation SummarizationSetBy = Automatic
+
+	column fornecedor_tipo_pessoa
+		dataType: string
+		lineageTag: dc22a6e8-54b4-4faa-a311-d85d2b968c58
+		summarizeBy: none
+		sourceColumn: fornecedor_tipo_pessoa
+
+		annotation SummarizationSetBy = Automatic
+
+	column porte_empresa
+		dataType: string
+		lineageTag: e08412d3-cadb-4455-8df1-da7de4064a35
+		summarizeBy: none
+		sourceColumn: porte_empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column cnae_codigo
+		dataType: string
+		lineageTag: 995f9e34-15c9-4664-aee5-a212b39aa1c4
+		summarizeBy: none
+		sourceColumn: cnae_codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column cnae_descricao
+		dataType: string
+		lineageTag: 29a7a662-7a1d-4a1c-82bc-defe8eb415a2
+		summarizeBy: none
+		sourceColumn: cnae_descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf_sede
+		dataType: string
+		lineageTag: 79735806-7025-4cf4-8af3-63b084d77a35
+		summarizeBy: none
+		sourceColumn: uf_sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column municipio_sede
+		dataType: string
+		lineageTag: 0aec91b2-8768-4dab-b68c-7cb9ec319d5c
+		summarizeBy: none
+		sourceColumn: municipio_sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column capital_social
+		dataType: double
+		lineageTag: 8875da25-7bf8-41ed-badd-5d2811485a91
+		summarizeBy: none
+		sourceColumn: capital_social
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_enriquecido_brasilapi
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b81e23e8-5a63-4060-9d93-ffb1562c14e0
+		summarizeBy: none
+		sourceColumn: is_enriquecido_brasilapi
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_fornecedor = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5433", "b2g_market_radar"),
+				    gold_dim_fornecedor = Fonte{[Schema="gold",Item="dim_fornecedor"]}[Data]
+				in
+				    gold_dim_fornecedor
+
+	changedProperty = Name
+
