@@ -1,0 +1,33 @@
+table dim_modalidade
+	lineageTag: b4b7db19-ab77-43a3-a3ba-1624fae3ee08
+
+	column codigo_modalidade
+		dataType: int64
+		formatString: 0
+		lineageTag: c79c4d6e-8170-48c7-ad8a-f9c140d184ef
+		summarizeBy: none
+		sourceColumn: codigo_modalidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column modalidade_nome
+		dataType: string
+		lineageTag: e4c81480-6e67-4132-b23f-389d51eb968d
+		summarizeBy: none
+		sourceColumn: modalidade_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_modalidade = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost:5433", "b2g_market_radar"),
+				    gold_dim_modalidade = Fonte{[Schema="gold",Item="dim_modalidade"]}[Data]
+				in
+				    gold_dim_modalidade
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

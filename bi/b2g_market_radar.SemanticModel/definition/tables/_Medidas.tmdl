@@ -1,0 +1,68 @@
+table _Medidas
+	lineageTag: 64d56511-8a37-49e8-9718-7e5dbb7649ec
+
+	measure 'Total Estimado (TAM)' = SUM(fato_contratacoes[valor_total_estimado])
+		lineageTag: ac74a945-2154-48da-870a-47ab778e9c23
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Homologado' = SUM(fato_contratacoes[valor_total_homologado])
+		lineageTag: 22d3b8e4-bac8-46f0-981b-25e7e81b920f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Qtd Licitacoes' = COUNTROWS(fato_contratacoes)
+		formatString: 0
+		lineageTag: 01e0ef62-2e4c-4c1c-935c-42a0de960fc8
+
+	measure 'Ticket Medio Estimado' = DIVIDE([Total Estimado (TAM)], [Qtd Licitacoes], 0)
+		lineageTag: 2fd17370-6139-4195-a8b0-e176d0a6da31
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Economia Gerada' = SUM(fato_contratacoes[valor_economia])
+		lineageTag: 224aa6bc-952c-4ebf-a669-278012cc220f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Taxa Desagio Ponderada' = ```
+			
+			VAR TotalEstimadoHomologado = 
+			    CALCULATE(
+			        [Total Estimado (TAM)],
+			        fato_contratacoes[status_homologacao] = "Homologado"
+			    )
+			RETURN
+			DIVIDE([Economia Gerada], TotalEstimadoHomologado, 0)
+			```
+		lineageTag: bfcbb514-bbeb-47ab-a6bb-157736f9a3fa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Licitacoes Homologadas' =
+			
+			DIVIDE(
+			    CALCULATE([Qtd Licitacoes], fato_contratacoes[status_homologacao] = "Homologado"),
+			    [Qtd Licitacoes],
+			    0
+			)
+		lineageTag: 3260f1dd-50f0-4622-b173-ff4b9105bffe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Orgaos Ativos' = DISTINCTCOUNT(fato_contratacoes[orgao_cnpj])
+		formatString: 0
+		lineageTag: 32c1faaf-264d-4bdf-9846-ccd78d59feef
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

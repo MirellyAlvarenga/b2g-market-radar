@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "b2g_market_radar"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d7cdff81-9c90-424c-9595-adf377c5cac6"
+  }
+}

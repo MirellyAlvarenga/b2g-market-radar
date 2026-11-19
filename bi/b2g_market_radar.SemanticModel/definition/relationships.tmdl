@@ -1,0 +1,31 @@
+relationship 7e75a0e3-8229-4bce-b095-8209eb4b7116
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_contratacoes.data_abertura_proposta
+	toColumn: LocalDateTable_c4164676-92e2-4175-a446-23f680146667.Date
+
+relationship 9c2f2dee-1fff-486d-b224-59b245defcce
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fato_contratacoes.data_encerramento_proposta
+	toColumn: LocalDateTable_231eec56-1207-4fda-a835-04a316b6bee6.Date
+
+relationship AutoDetected_c78613f7-8457-4fe5-9bcd-44044e82810f
+	fromColumn: fato_contratacoes.codigo_ibge
+	toColumn: dim_localidade.codigo_ibge
+
+relationship AutoDetected_a7c989bb-9cae-497f-9d02-01dc472d1689
+	fromColumn: fato_contratacoes.codigo_modalidade
+	toColumn: dim_modalidade.codigo_modalidade
+
+relationship AutoDetected_d86956e6-46f2-4e66-aac3-86abb7c165a7
+	fromColumn: fato_contratacoes.orgao_cnpj
+	toColumn: dim_orgao.orgao_cnpj
+
+relationship 212212c3-ff4e-4a90-9eb9-a584db717ccb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCalendario.Date
+	toColumn: LocalDateTable_a050853f-7f0a-4643-8f80-64f4405f055b.Date
+
+relationship b73103e9-b77f-78b4-a99a-95ec2d726e34
+	fromColumn: fato_contratacoes.data_publicacao
+	toColumn: dCalendario.Date
+
