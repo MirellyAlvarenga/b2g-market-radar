@@ -1,3 +1,11 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='numero_controle_pncp',
+        incremental_strategy='delete+insert'
+    )
+}}
+
 WITH raw_deduplicated AS (
     SELECT DISTINCT ON (numero_controle_pncp)
         id AS bronze_id,
@@ -7,6 +15,12 @@ WITH raw_deduplicated AS (
         extracted_at
     FROM {{ source('bronze', 'pncp_contratacoes') }}
     WHERE numero_controle_pncp IS NOT NULL
+    {% if is_incremental() %}
+        AND extracted_at > (
+            SELECT COALESCE(MAX(extracted_at), '1900-01-01'::TIMESTAMPTZ)
+            FROM {{ this }}
+        )
+    {% endif %}
     ORDER BY numero_controle_pncp, extracted_at DESC
 )
 

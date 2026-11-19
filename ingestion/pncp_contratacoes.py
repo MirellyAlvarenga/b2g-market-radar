@@ -1,47 +1,71 @@
+import argparse
 import json
 import logging
+import os
+import sys
 import time
-from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 import httpx
-from sqlalchemy import text
+from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 
-from ingestion.audit import finish_pipeline_run, start_pipeline_run
+# Garante importação correta mesmo se executado fora de `python -m`
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
-from ingestion.db import get_engine
+try:
+    from dotenv import load_dotenv
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
+    load_dotenv(ROOT_DIR / ".env")
+except ImportError:
+    pass
+
+from ingestion.audit import finish_pipeline_run, get_last_watermark, start_pipeline_run
+
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao"
+PNCP_BASE_URL = "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao"
 
-# Principais modalidades do PNCP para inteligência comercial
-MODALIDADES_ALVO = {
+MODALIDADES_ALVO: dict[int, str] = {
     6: "Pregão - Eletrônico",
-    8: "Dispensa de Licitação",
+    8: "Dispensa",
 }
 
 
+def get_engine() -> Engine:
+    """Cria a engine SQLAlchemy conectada ao PostgreSQL do container Docker."""
+    host = os.getenv("POSTGRES_HOST", "localhost")
+    port = os.getenv("POSTGRES_PORT", "5433")
+    db = os.getenv("POSTGRES_DB", "b2g_market_radar")
+    user = os.getenv("POSTGRES_USER", "b2g_admin")
+    password = os.getenv("POSTGRES_PASSWORD", "b2g_secret_password")
+
+    url = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}"
+    return create_engine(url, pool_pre_ping=True)
+
+
 def ensure_bronze_table(engine: Engine) -> None:
-    """Cria a tabela bruta no schema bronze caso ainda não exista."""
+    """Garante a existência do schema bronze e da tabela bruta de contratações."""
     ddl = """
+    CREATE SCHEMA IF NOT EXISTS bronze;
+
     CREATE TABLE IF NOT EXISTS bronze.pncp_contratacoes (
         id BIGSERIAL PRIMARY KEY,
-        numero_controle_pncp VARCHAR(100),
+        numero_controle_pncp VARCHAR(100) NOT NULL,
         codigo_modalidade INTEGER NOT NULL,
-        data_publicacao_pncp VARCHAR(30),
+        data_publicacao_pncp TIMESTAMPTZ,
         raw_payload JSONB NOT NULL,
         extracted_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     );
 
     CREATE INDEX IF NOT EXISTS idx_bronze_pncp_controle
         ON bronze.pncp_contratacoes (numero_controle_pncp);
+
+    CREATE INDEX IF NOT EXISTS idx_bronze_pncp_extracted_at
+        ON bronze.pncp_contratacoes (extracted_at);
     """
     with engine.begin() as conn:
         conn.execute(text(ddl))
@@ -50,23 +74,25 @@ def ensure_bronze_table(engine: Engine) -> None:
 def fetch_page_with_retry(
     client: httpx.Client,
     params: dict[str, Any],
-    max_retries: int = 4,
+    max_retries: int = 5,
 ) -> dict[str, Any] | None:
-    """Consulta uma página da API com backoff exponencial para rate limit (429) e instabilidades (5xx)."""
+    """Consulta uma página da API do PNCP com exponential backoff para 429 e 5xx."""
     for attempt in range(1, max_retries + 1):
         try:
-            response = client.get(BASE_URL, params=params)
+            response = client.get(PNCP_BASE_URL, params=params)
 
-            # PNCP retorna 204 No Content quando não existem registros para o filtro/página
+            if response.status_code == 200:
+                return response.json()
+
             if response.status_code == 204:
                 return None
 
-            if response.status_code == 429 or response.status_code >= 500:
-                wait_seconds = 2**attempt
+            if response.status_code in (429, 500, 502, 503, 504):
+                wait_seconds = min(2**attempt, 30)
                 logger.warning(
-                    "Status %s na página %s. Tentativa %s/%s. Aguardando %ss...",
+                    "HTTP %s na página %s (tentativa %s/%s). Aguardando %ss...",
                     response.status_code,
-                    params["pagina"],
+                    params.get("pagina"),
                     attempt,
                     max_retries,
                     wait_seconds,
@@ -75,12 +101,13 @@ def fetch_page_with_retry(
                 continue
 
             response.raise_for_status()
-            return response.json()
 
         except httpx.RequestError as exc:
-            wait_seconds = 2**attempt
+            if attempt == max_retries:
+                raise
+            wait_seconds = min(2**attempt, 30)
             logger.warning(
-                "Erro de rede (%s). Tentativa %s/%s. Aguardando %ss...",
+                "Erro de rede (%s) na tentativa %s/%s. Aguardando %ss...",
                 exc,
                 attempt,
                 max_retries,
@@ -88,49 +115,53 @@ def fetch_page_with_retry(
             )
             time.sleep(wait_seconds)
 
-    raise RuntimeError(
-        f"Falha ao consultar PNCP após {max_retries} tentativas: {params}"
-    )
+    raise RuntimeError(f"Falha após {max_retries} tentativas para params={params}")
 
 
 def save_batch(
-    engine: Engine, items: list[dict[str, Any]], codigo_modalidade: int
+    engine: Engine,
+    items: list[dict[str, Any]],
+    codigo_modalidade: int,
 ) -> int:
-    """Insere um lote de registros brutos na tabela bronze.pncp_contratacoes."""
+    """Persiste um lote de registros brutos (JSONB) na camada bronze."""
     if not items:
         return 0
 
-    extracted_at = datetime.now(timezone.utc)
-    rows = [
-        {
-            "numero_controle_pncp": item.get("numeroControlePNCP"),
-            "codigo_modalidade": codigo_modalidade,
-            "data_publicacao_pncp": item.get("dataPublicacaoPncp"),
-            "raw_payload": json.dumps(item, ensure_ascii=False),
-            "extracted_at": extracted_at,
-        }
-        for item in items
-    ]
+    rows = []
+    for item in items:
+        numero_controle = item.get("numeroControlePNCP")
+        if not numero_controle:
+            continue
 
-    insert_sql = text("""
+        rows.append(
+            {
+                "numero_controle_pncp": numero_controle,
+                "codigo_modalidade": codigo_modalidade,
+                "data_publicacao_pncp": item.get("dataPublicacaoPncp"),
+                "raw_payload": json.dumps(item, ensure_ascii=False),
+            }
+        )
+
+    if not rows:
+        return 0
+
+    sql = text("""
         INSERT INTO bronze.pncp_contratacoes (
             numero_controle_pncp,
             codigo_modalidade,
             data_publicacao_pncp,
-            raw_payload,
-            extracted_at
+            raw_payload
         )
         VALUES (
             :numero_controle_pncp,
             :codigo_modalidade,
-            :data_publicacao_pncp,
-            CAST(:raw_payload AS JSONB),
-            :extracted_at
+            CAST(:data_publicacao_pncp AS TIMESTAMPTZ),
+            CAST(:raw_payload AS JSONB)
         )
     """)
 
     with engine.begin() as conn:
-        conn.execute(insert_sql, rows)
+        conn.execute(sql, rows)
 
     return len(rows)
 
@@ -183,9 +214,7 @@ def ingest_contratacoes(
 
                     payload = fetch_page_with_retry(client, params)
                     if not payload:
-                        logger.info(
-                            "Sem mais registros (HTTP 204) na página %s.", pagina
-                        )
+                        logger.info("Sem mais registros (HTTP 204) na página %s.", pagina)
                         break
 
                     items = payload.get("data", [])
@@ -211,11 +240,7 @@ def ingest_contratacoes(
                     pagina += 1
                     time.sleep(0.3)
 
-                logger.info(
-                    "Concluído [%s]: %s registros carregados.",
-                    nome_mod,
-                    total_modalidade,
-                )
+                logger.info("Concluído [%s]: %s registros carregados.", nome_mod, total_modalidade)
                 total_inserido += total_modalidade
 
         finish_pipeline_run(
@@ -226,11 +251,7 @@ def ingest_contratacoes(
             records_extracted=total_extraido,
             records_inserted=total_inserido,
         )
-        logger.info(
-            "Ingestão finalizada (run_id=%s). Total inserido: %s.",
-            run_id,
-            total_inserido,
-        )
+        logger.info("Ingestão finalizada (run_id=%s). Total inserido: %s.", run_id, total_inserido)
 
     except Exception as exc:
         finish_pipeline_run(
@@ -246,9 +267,28 @@ def ingest_contratacoes(
         raise
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Extrator incremental de contratações do PNCP.")
+    parser.add_argument("--data-inicial", type=str, default=None, help="Data inicial no formato YYYYMMDD")
+    parser.add_argument("--data-final", type=str, default=None, help="Data final no formato YYYYMMDD")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    # Janela curta de 3 dias para validação rápida do MVP
-    ingest_contratacoes(
-        data_inicial="20261103",
-        data_final="20261105",
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
     )
+
+    args = parse_args()
+    engine = get_engine()
+
+    if args.data_inicial and args.data_final:
+        dt_ini, dt_fim = args.data_inicial, args.data_final
+        logger.info("Executando em modo MANUAL (backfill): %s até %s", dt_ini, dt_fim)
+    else:
+        dt_ini, dt_fim = get_last_watermark(engine, pipeline_name="pncp_contratacoes_bronze")
+        logger.info("Executando em modo INCREMENTAL (watermark): %s até %s", dt_ini, dt_fim)
+
+    ingest_contratacoes(data_inicial=dt_ini, data_final=dt_fim)

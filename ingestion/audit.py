@@ -5,6 +5,7 @@ from typing import Any
 
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
+from datetime import date, datetime, timedelta, timezone
 
 logger = logging.getLogger(__name__)
 
@@ -95,3 +96,38 @@ def finish_pipeline_run(
                 "error_message": error_message,
             },
         )
+
+def get_last_watermark(
+    engine: Engine,
+    pipeline_name: str,
+    default_lookback_days: int = 3,
+    safety_overlap_days: int = 2,
+) -> tuple[str, str]:
+    """
+    Calcula a janela incremental (data_inicial, data_final) no formato YYYYMMDD.
+    Usa o último data_final registrado com sucesso menos uma margem de segurança
+    para capturar atualizações tardias (como homologações).
+    """
+    ensure_audit_table(engine)
+    hoje = datetime.now(timezone.utc).date()
+
+    sql = text("""
+        SELECT metadata ->> 'data_final' AS last_data_final
+        FROM audit.pipeline_runs
+        WHERE pipeline_name = :pipeline_name
+          AND status = 'SUCCESS'
+          AND metadata ->> 'data_final' IS NOT NULL
+        ORDER BY finished_at DESC
+        LIMIT 1
+    """)
+
+    with engine.begin() as conn:
+        last_str = conn.execute(sql, {"pipeline_name": pipeline_name}).scalar_one_or_none()
+
+    if last_str:
+        last_date = datetime.strptime(last_str, "%Y%m%d").date()
+        start_date = min(last_date - timedelta(days=safety_overlap_days), hoje)
+    else:
+        start_date = hoje - timedelta(days=default_lookback_days)
+
+    return start_date.strftime("%Y%m%d"), hoje.strftime("%Y%m%d")
