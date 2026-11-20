@@ -6,7 +6,7 @@ b2g_market_radar:
       host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
       user: "{{ env_var('POSTGRES_USER', 'b2g_admin') }}"
       password: "{{ env_var('POSTGRES_PASSWORD', 'b2g_secret_password') }}"
-      port: "{{ env_var('POSTGRES_PORT', '5433') | as_number }}"
+      port: "{{ env_var('POSTGRES_PORT', 5433) | int }}"
       dbname: "{{ env_var('POSTGRES_DB', 'b2g_market_radar') }}"
       schema: silver
       threads: 4

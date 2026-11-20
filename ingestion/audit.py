@@ -11,8 +11,10 @@ logger = logging.getLogger(__name__)
 
 
 def ensure_audit_table(engine: Engine) -> None:
-    """Garante que a tabela de logs de execução exista no schema audit."""
+    """Garante que o schema audit e a tabela de logs de execução existam."""
     ddl = """
+    CREATE SCHEMA IF NOT EXISTS audit;
+
     CREATE TABLE IF NOT EXISTS audit.pipeline_runs (
         run_id BIGSERIAL PRIMARY KEY,
         pipeline_name VARCHAR(100) NOT NULL,

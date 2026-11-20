@@ -1,21 +1,37 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: b2g-postgres
+    container_name: b2g_postgres
     restart: unless-stopped
-    env_file:
-      - ../.env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-b2g_market_radar}
+      POSTGRES_USER: ${POSTGRES_USER:-b2g_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-b2g_secret_password}
     ports:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
-      interval: 10s
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-b2g_admin} -d ${POSTGRES_DB:-b2g_market_radar}"]
+      interval: 5s
       timeout: 5s
       retries: 5
 
+  etl-pipeline:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: b2g_etl_pipeline
+    profiles: ["pipeline"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-b2g_market_radar}
+      POSTGRES_USER: ${POSTGRES_USER:-b2g_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-b2g_secret_password}
+
 volumes:
   postgres_data:
-    name: b2g_market_radar_pgdata
