@@ -33,5 +33,31 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-b2g_admin}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-b2g_secret_password}
 
+  airflow:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.airflow
+    container_name: b2g_airflow
+    profiles: ["airflow"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/project/orchestration/dags
+      AIRFLOW__WEBSERVER__SECRET_KEY: b2g_airflow_secret_key
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-b2g_market_radar}
+      POSTGRES_USER: ${POSTGRES_USER:-b2g_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-b2g_secret_password}
+    volumes:
+      - ..:/opt/airflow/project
+    command: standalone
+
 volumes:
   postgres_data:
